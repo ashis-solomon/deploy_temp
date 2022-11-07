@@ -149,7 +149,7 @@ def statTRY():
     print("hey")
     print(yy)
 
-    acousticness = float(yy["acousticness"])
+    # acousticness = float(yy["acousticness"])
     danceability = float(yy["danceability"])
     duration_ms = float(yy["duration"])
     energy = float(yy["energy"])
