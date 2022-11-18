@@ -120,8 +120,8 @@ def stat():
     popularity_ar = float(dfdict["popularity_ar"])
     #popularity_ar=float(popularity_ar/2)
     #popularity_ar = float(items[1])
-    #if(popularity_ar<35):
-       #popularity_ar=float(items[1])
+    if(popularity_ar<35):
+       popularity_ar=float(items[1])
     model = joblib.load('model.pkl')
     prediction=model.predict([[acousticness,danceability,duration_ms,energy,explicit,instrumentalness,liveness,loudness,speechiness,tempo,valence,year,
     key_1,key_2,key_3,key_4,key_5,key_6,key_7,key_8,key_9,key_10,key_11,mode,acousticness_ar,
