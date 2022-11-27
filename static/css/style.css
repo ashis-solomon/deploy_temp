@@ -1,34 +1,10 @@
-/* body{
-    overflow-x: hidden;
-}
-h1 {
-    text-align: center;
-}
 
-h3 {
-    text-align: center;
-}
-
-p {
-    text-align: center;
-}
-
-div {
-    text-align: center;
-}
-
-section {
-    text-align: center;
-} */
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Open-Sans',sans-serif;
 }
 
 /* body{
@@ -117,7 +93,7 @@ body{
   padding: 0%;
   overflow-x: hidden;
 }
-.splash
+/* .splash
 {
   position: fixed;
   top:0;
@@ -143,6 +119,11 @@ z-index: -10;
 color: white;
 text-align: center;
 line-height:90vh;
+} */
+/* stat head */
+.stat-head
+{
+  padding-top: 3rem;
 }
 
 @keyframes fadeIn {
@@ -163,3 +144,28 @@ line-height:90vh;
   opacity: 0;
   animation: fadeOut 2s;
 }
+
+.tryout-header
+{
+  text-align: center;
+  margin-top: 5rem;
+}
+/* card padding */
+.card-padding
+{
+  padding-bottom: 3rem;
+}
+.new-backround
+{
+  background-color: black;
+}
+.new-text
+{
+  color: #fff;
+}
+/* .index-head
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 20rem;
+} */

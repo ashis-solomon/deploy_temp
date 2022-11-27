@@ -28,24 +28,8 @@ def stat():
     items=pass_str.split('!@#$%')
     #print(items)
     print("hey")
-    x_x=[]
-    #y=pd.DataFrame()
     x=json.loads(items[0])
-    print("hey")
-    for i in x:
-     #  weight = isinstance(i, nonetype)
-       
-     if type(i) is type(None):
-      print("Can't find song")
-     else:
-      x_x.append(i)
-       #else:
-       #  print("False")  
-      # print(i)
-      # print("hy")
-       #print(type(i))
-    y=pd.DataFrame(x_x)
-    #print(y)
+    y=pd.DataFrame(x)
     df=y.sort_values(by=['popularity'], ascending=False)
     df.drop(['type','uri','track_href','id','analysis_url'], axis=1,inplace=True)
     dfx=df.drop_duplicates(subset=['danceability', 'energy', 'key', 'loudness', 'mode', 'speechiness',
@@ -118,10 +102,9 @@ def stat():
     tempo_ar = float(dfdict["tempo_ar"])
     valence_ar = float(dfdict["valence_ar"])
     popularity_ar = float(dfdict["popularity_ar"])
-    #popularity_ar=float(popularity_ar/2)
     #popularity_ar = float(items[1])
-    if(popularity_ar<35):
-       popularity_ar=float(items[1])
+    #if(popularity_ar<36):
+    #   popularity_ar=float(items[1])
     model = joblib.load('model.pkl')
     prediction=model.predict([[acousticness,danceability,duration_ms,energy,explicit,instrumentalness,liveness,loudness,speechiness,tempo,valence,year,
     key_1,key_2,key_3,key_4,key_5,key_6,key_7,key_8,key_9,key_10,key_11,mode,acousticness_ar,
